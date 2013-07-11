@@ -23,11 +23,10 @@
 #ifndef EtherCard_h
 #define EtherCard_h
 
-
 #if ARDUINO >= 100
   #include <Arduino.h> // Arduino 1.0
-  #define WRITE_RESULT size_t
-  #define WRITE_RETURN return 1;
+  #define WRITE_RESULT void
+  #define WRITE_RETURN
 #else
   #include <WProgram.h> // Arduino 0022
   #define WRITE_RESULT void

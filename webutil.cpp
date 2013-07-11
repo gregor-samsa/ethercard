@@ -21,7 +21,7 @@ void EtherCard::printIp (const char* msg, const byte *buf) {
 }
 
 void EtherCard::printIp (const __FlashStringHelper *ifsh, const byte *buf) {
-	Serial.print(ifsh);
+	//Serial.print(ifsh);
 	EtherCard::printIp(buf);
 	Serial.println();
 }

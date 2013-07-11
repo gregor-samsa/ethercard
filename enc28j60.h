@@ -12,6 +12,13 @@
 
 #ifndef ENC28J60_H
 #define ENC28J60_H
+
+#define SCK   WAL0
+#define MOSI  WAL1
+#define MISO  WAL2
+#define SS    WA8
+#define SPI2X 0
+
     
 class ENC28J60 {
 public:

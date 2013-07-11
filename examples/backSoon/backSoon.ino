@@ -7,9 +7,9 @@
 
 #if STATIC
 // ethernet interface ip address
-static byte myip[] = { 192,168,1,200 };
+static byte myip[] = { 10,0,1,201 };
 // gateway ip address
-static byte gwip[] = { 192,168,1,1 };
+static byte gwip[] = { 10,0,1,1 };
 #endif
 
 // ethernet mac address - must be unique on your network
@@ -37,6 +37,12 @@ char page[] PROGMEM =
 ;
 
 void setup(){
+  // set up pins
+  SPI1_sck_LOC  = WAL0;
+  SPI1_mosi_LOC = WAL1;
+  SPI1_miso_LOC = WAL2;
+  SPI1_cs_LOC   = WA8;
+
   Serial.begin(57600);
   Serial.println("\n[backSoon]");
   
